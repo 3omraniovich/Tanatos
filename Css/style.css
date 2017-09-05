@@ -4,6 +4,9 @@
 	-o-box-sizing: border-box;
 	box-sizing: border-box;
 }
+body {
+    overflow-x: hidden;
+}
 h1, h2, h3, h4 {
     font-family: 'Coda', cursive;
 	letter-spacing: 1px;
@@ -43,7 +46,7 @@ h3 span {
 
 .header {
     position: relative;
-	padding: 30px 0 40px;
+	padding: 30px 0 0px;
 	color: #fff;
 	background: 
 		linear-gradient( rgba(47, 53, 60, 0.81),
@@ -144,9 +147,26 @@ h3 span {
 }
 .header .body i {
 	display: block;
-	margin-top: 30px;
+	margin: 30px auto 10px;
 	cursor: pointer;
     text-align: center;
+    border-radius: 20px;
+    border: 2px solid #fff;
+    width: 35px;
+    height: 65px;
+    line-height: 40px;
+    transition: color 0.4s ease-in-out, border 0.4s ease-in-out;
+    animation: 1s scrollDown infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+.header .body i:hover {
+    color: #f7600e;
+    border: 2px solid #f7600e;
+}
+@keyframes scrollDown {
+    0%   {line-height: 40px}
+    100% {line-height: 85px}
 }
 
 /* end header */
@@ -157,17 +177,12 @@ h3 span {
 	padding: 50px 0 50px;
 	overflow: hidden;
 }
-/*
+
 .features .box {
-	width: 22.5%;
-	float: left;
-	margin-right: 3.3333333333333%;
+	margin-bottom: 30px;
 }
 
-.features .box:last-of-type {
-	margin-right: 0;
-}
-*/
+
 .features .box i {
 	width: 100px;
 	height: 100px;
@@ -346,11 +361,11 @@ h3 span {
 	cursor: pointer;
 	transition: all 0.5s ease-in-out; 
 }
-.testi .active {
-	display: block;
+.testi .client {
+    display: none;
 }
-.testi .hidden {
-	display: none;
+.activate {
+	display: block !important;
 }
 .testi i:last-of-type {
 	float: right;
@@ -395,9 +410,7 @@ h3 span {
     width: 90%;
 	height: 280px;
 	border: 1px solid #999;
-}
-.team .member:last-of-type {
-	margin-right: 0;
+    margin: auto;
 }
 .team .member .member-overlay {
 	position: absolute;
