@@ -147,7 +147,7 @@ h3 span {
 }
 .header .body i {
 	display: block;
-	margin: 30px auto 25px;
+	margin: 30px auto 10px;
 	cursor: pointer;
     text-align: center;
     border-radius: 20px;
@@ -638,9 +638,9 @@ h3 span {
         font-weight: bold !important;
     }
     
-	.header .body {
-	margin-top: 100px !important;
-	}
+    .header .body {
+        margin-top: 100px !important;
+    }
     .header .clicked-menu {
         width: 100% !important;
         right: 0 !important;
