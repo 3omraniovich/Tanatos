@@ -3,7 +3,7 @@
 $(function () {
 	"use strict";
 
-	$(".header").height($(window).innerHeight());
+	$(".header").height($(window).height());
 	
 	/*$(window).resize(function () {
 		$(".header").height($(window).height());
@@ -17,14 +17,14 @@ $(function () {
         $(".clicked-menu").slideDown('800');
     });
     $(".clicked-menu > i").on("click", function () {
-        $(".clicked-menu").slideUp('600');
+        $(".clicked-menu").slideUp('500');
         $(".header .menu .click-here").fadeIn();
     });
     
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 300) {
+        if ($(this).scrollTop() > 400) {
+            $(".clicked-menu").css('display', 'none');
             $(".header .menu .click-here").fadeIn();
-            $(".clicked-menu").slideUp('800');
         }
     });
     
@@ -186,41 +186,35 @@ $(function () {
 	
 	// adjust testimonials chevrones
 	
-	var leftArrow = $(".testi i"),
-		rightArrow = $(".testi i");
-	
-	function checkClients() {
-		
-		if ($(".client:first").hasClass("active")) {
-            leftArrow.fadeOut();
+    function checkClients() {
+        if ($(".client:first").hasClass("activate")) {
+            $("#leftArrow").css('display', 'none');
         } else {
-            leftArrow.fadeIn();
+            $("#leftArrow").fadeIn('500');
         }
-		if ($(".client:last").hasClass("active")) {
-            rightArrow.fadeOut();
+        if ($(".client:last").hasClass("activate")) {
+            $("#rightArrow").css('display', 'none');
         } else {
-            rightArrow.fadeIn();
+            $("#rightArrow").fadeIn('500');
         }
-		
-	}
-	checkClients();
-	
-	$(".testi i").each(function () {
-        $(this).on('click', function () {
-            if ($(this).hasClass("fa-chevron-right")) {
-                $(".testi .active").fadeOut('200 ', function () {
-                    $(this).removeClass("active").next().addClass("acive").fadeIn();
-                    checkClients();
-                });
-            } else {
-                $(".testi .active").fadeOut('200 ', function () {
-                    $(this).removeClass("active").prev().addClass("acive").fadeIn();
-                    checkClients();
-                });
-            }
-        });
+    }
+    checkClients();
+    
+	$(".testi .container > i").click(function () {
+        if ($(this).hasClass("fa-chevron-right")) {
+            $(".testi .activate").removeClass("activate").fadeOut('500', function () {
+                $(this).next().fadeIn('800').addClass("activate");
+                checkClients();
+            });
+	    }
+        if ($(this).hasClass("fa-chevron-left")) {
+            $(".testi .activate").removeClass("activate").fadeOut('500', function () {
+                $(this).prev().fadeIn('800').addClass("activate");
+                checkClients();
+            });
+	    }
 	});
-	
+    
 	
     // adjust scroll to top 
     
