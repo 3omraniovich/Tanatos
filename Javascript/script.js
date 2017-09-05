@@ -22,7 +22,7 @@ $(function () {
     });
     
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 400) {
+        if ($(this).scrollTop() > 100) {
             $(".clicked-menu").css('display', 'none');
             $(".header .menu .click-here").fadeIn();
         }
