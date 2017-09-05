@@ -45,6 +45,7 @@ h3 span {
 /* start header */
 
 .header {
+    height: 662px;
     position: relative;
 	padding: 30px 0 25px;
 	color: #fff;
