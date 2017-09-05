@@ -59,6 +59,7 @@ h3 span {
 }
 .header .brand {
 	float: left;
+	color: #fff;
 }
 .header .menu .click-here {
 	float: right;
