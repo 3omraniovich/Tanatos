@@ -638,6 +638,9 @@ h3 span {
         font-weight: bold !important;
     }
     
+	.header .body {
+	margin-top: 100px !important;
+	}
     .header .clicked-menu {
         width: 100% !important;
         right: 0 !important;
