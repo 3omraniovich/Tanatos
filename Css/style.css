@@ -80,6 +80,7 @@ h3 span {
     height: 100%;
     width: 230px;
     display: none;
+    z-index: 9999;
 }
 .header .menu .clicked-menu > i {
     display: block;
@@ -505,13 +506,14 @@ h3 span {
 }
 .contact .sub-contact {
     margin: auto;
-    width: 500px;
+    width: 100%;
+    text-align: center;
 }
 .contact button {
 	color: #fff;
 	background: #f7600e;
     padding: 9px 18px;
-    margin: 24px auto 0;
+    margin: 24px auto 15px;
 	border: none;
 	border-radius: 8px;
     border: 1px solid #f7600e;
@@ -525,7 +527,7 @@ h3 span {
 }
 .contact .social {
     margin: 30px auto 0;
-    width: 300px;
+    width: 100%;
     overflow: hidden;
 }
 .contact .social i {
@@ -611,20 +613,41 @@ h3 span {
 /* start mediaquery fixes for responsive */
 
 @media (max-width: 767px) {
+    p, li, a, q, span, button {
+        font-size: 14px !important;
+    }
+    h1, h2, h3, h4, .header h1 span, .works h2 span, .team h2 span, .contact h2 span {
+        font-size: 24px !important;
+        font-weight: bold !important;
+    }
+    h3, h3 span {
+        font-size: 18px !important;
+        font-weight: bold !important;
+    }
+    
     .header .clicked-menu {
         width: 100% !important;
         right: 0 !important;
+    }
+    .header .container .menu .click-here > span {
+        font-size: 17px !important;
     }
     .header .clicked-menu .list {
         padding-left: 100px !important;
     }
     
-    .header .body p {
+    .header .container .body p {
         padding: 0 60px;
+        font-size: 15px !important;
     }
-    .header .body button {
+    .header .container .body button {
         display: block;
-        margin: 30px auto !important;
+        margin: 30px auto;
+    }
+    
+    .subscribe .container input {
+        display: block;
+        margin: 10px auto;
     }
     
     .team .member {
@@ -638,7 +661,11 @@ h3 span {
     }
 }
 
-
+@media (max-width: 440px) {
+    .contact form input, .contact form textarea {
+        width: 90% !important;
+    }
+}
 
 @media (min-width: '992px') and (max-width: '1199px') {
    #works-margin {
