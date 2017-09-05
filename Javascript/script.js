@@ -1,4 +1,4 @@
-/*global $, alert, console*/
+/*global $, alert, console, mixitup*/
 
 $(function () {
 	"use strict";
@@ -22,7 +22,7 @@ $(function () {
     });
     
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
+        if ($(this).scrollTop() > 50) {
             $(".clicked-menu").css('display', 'none');
             $(".header .menu .click-here").fadeIn();
         }
@@ -42,27 +42,27 @@ $(function () {
     $(".clicked-menu .list").eq(1).on("click", function () {
 		$('html, body').animate({
 			scrollTop: $('.subscribe').offset().top
-		}, 580);
+		}, 600);
 	});
     $(".clicked-menu .list").eq(2).on("click", function () {
 		$('html, body').animate({
 			scrollTop: $('.works').offset().top
-		}, 580);
+		}, 600);
 	});
     $(".clicked-menu .list").eq(3).on("click", function () {
 		$('html, body').animate({
 			scrollTop: $('.testi').offset().top
-		}, 580);
+		}, 700);
 	});
     $(".clicked-menu .list").eq(4).on("click", function () {
 		$('html, body').animate({
 			scrollTop: $('.team').offset().top
-		}, 580);
+		}, 800);
 	});
     $(".clicked-menu .list").eq(5).on("click", function () {
 		$('html, body').animate({
 			scrollTop: $('.contact').offset().top
-		}, 580);
+		}, 1000);
 	});
     
     
